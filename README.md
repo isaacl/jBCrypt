@@ -42,13 +42,20 @@ This is an alternative distribution of [jBCrypt](http://www.mindrot.org/projects
 packaged to ease use in existing applications &mdash; especially those using
 Apache Maven. 
 
-The code is unchanged from the original jBCrypt 0.4, however:
-
+Packaging changes:
 - The classes have been moved to a java package to avoid pollution of the
   global namespace. *org.mindrot* was chosen to reflect their original origin.
 - The JBCrypt class javadoc has been changed to version 0.4. The official
   package incorrectly contains 0.2 as the stated version.
 - A pom.xml file has been added for use with Maven 
+
+Code changes (by [Isaac Levy](https://github.com/isaacl)):
+- refactors to work with unencoded byte input/output
+- performance opts, about 10% speedup
+- minor stylistic changes, such as using
+  StringBuilder instead of StringBuffer.
+
+
 
 ## Maven setup
 
